@@ -1,0 +1,48 @@
+body{
+  background: linear-gradient(to bottom right,#6889ff,#c668ff);
+}
+.container {
+  width: 400px;
+  margin: 10rem auto;
+  padding: 40px 0 40px 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3d61e6;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+}
+
+.rating label:hover,
+.rating input[type="radio"]:checked + label {
+  color: #ffcc00;
+}
+
+.rating input[type="radio"]:checked + label ~ input[type="radio"] + label:before {
+  content: '\2606';
+  color: #ccc;
+}
